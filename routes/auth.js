@@ -12,7 +12,9 @@ router.get("/login", (req, res, next) => {
   res.render("auth/login", { message: req.flash("error") });
 });
 
-router.post("/login", passport.authenticate("local", {
+router.post(
+  "/login",
+  passport.authenticate("local", {
     successRedirect: "/auth/myProfile",
     failureRedirect: "/auth/login",
     failureFlash: true,
@@ -25,9 +27,18 @@ router.get("/signup", (req, res, next) => {
 });
 
 router.post("/signup", (req, res, next) => {
-  const username = req.body.username;
-  const password = req.body.password;
-  const email = req.body.email;
+  // const username = req.body.username;
+  // const password = req.body.password;
+  // const email = req.body.email;
+  // const picPath = req.file.url;
+  // const picName = req.file.originalname;
+
+  console.log(req.file)
+
+  const picPath = req.file.url;
+  const picName = req.file.originalname;
+  const { username, email, password } = req.body;
+
   if (username === "" || password === "") {
     res.render("auth/signup", { message: "Indicate username and password" });
     return;
@@ -45,13 +56,15 @@ router.post("/signup", (req, res, next) => {
     const newUser = new User({
       username,
       password: hashPass,
-      email
+      email,
+      picPath,
+      picName,
     });
 
     newUser
       .save()
       .then(() => {
-        res.redirect(307,'/auth/login')
+        res.redirect(307, "/auth/login");
       })
       .catch(err => {
         res.render("auth/signup", { message: "Something went wrong" });

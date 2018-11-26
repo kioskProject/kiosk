@@ -8,7 +8,6 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
-
 const session    = require("express-session");
 const MongoStore = require('connect-mongo')(session);
 const flash      = require("connect-flash");
@@ -79,10 +78,6 @@ hbs.registerHelper('ifUndefined', (value, options) => {
 
 // default value for title local
 app.locals.title = 'Express - Generated with IronGenerator';
-
-
-
-
 
 const index = require('./routes/index');
 app.use('/', index);
