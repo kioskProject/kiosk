@@ -32,12 +32,7 @@ let users = [
   }
 ]
 
-let kiosks = [
-{
 
-}
-
-]
 
 
 const Promise1 = 
