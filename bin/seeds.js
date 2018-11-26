@@ -35,7 +35,7 @@ let users = [
 let kiosks = [
 {
   kioskName: "Kiosk America",
-  location: "AV. AMÉRICA",
+  location: { type: { type: String }, coordinates: [40.3923653, -3.6985298] },
   wifi: yes,
   drinks: yes,
   internationalPress: yes,
@@ -50,7 +50,7 @@ let kiosks = [
 
 {
   kioskName: "Your Kiosk",
-  location: "Paseo Castellana",
+  location: { type: { type: String }, coordinates: [40.4497445, -3.6474242] },
   wifi: yes,
   drinks: yes,
   internationalPress: yes,
