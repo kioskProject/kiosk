@@ -1,5 +1,5 @@
 
-
+let center = {};
 
 // Try to get a geolocation object from the web browser
 if (navigator.geolocation) {
@@ -8,7 +8,7 @@ if (navigator.geolocation) {
   // The permissions dialog will pop up
   navigator.geolocation.getCurrentPosition(function (position) {
     // Create an object to match Google's Lat-Lng object format
-    const center = {
+    center = {
       lat: position.coords.latitude,
       lng: position.coords.longitude
     };
@@ -26,10 +26,3 @@ if (navigator.geolocation) {
 
 
 
-
-// the result of the console.log()
-center:
-  {
-    lat: 41.39780037511012,
-    lng: 2.1905911449111493
-  }

@@ -32,7 +32,37 @@ let users = [
   }
 ]
 
+let kiosks = [
+{
+  kioskName: "Kiosk America",
+  location: "AV. AMÉRICA",
+  wifi: yes,
+  drinks: yes,
+  internationalPress: yes,
+  cards: yes,
+  souvenirs: yes,
+  kidsCards: yes,
+  cigarettes: yes,
+  rate: 3,
+  picPath: String,
+  picName: "black"
+},
 
+{
+  kioskName: "Your Kiosk",
+  location: "Paseo Castellana",
+  wifi: yes,
+  drinks: yes,
+  internationalPress: yes,
+  cards: yes,
+  souvenirs: yes,
+  kidsCards: yes,
+  cigarettes: yes,
+  rate: 4,
+  picPath: String,
+  picName: "foo"
+}
+]
 
 
 const Promise1 = 

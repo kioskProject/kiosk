@@ -7,8 +7,9 @@ function startMap() {
     document.getElementById('map'),
     {
       zoom: 5,
-      center: ironhackBCN
+      center: center
     }
   );
+  
 }
 startMap();
