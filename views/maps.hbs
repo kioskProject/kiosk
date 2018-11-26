@@ -1,0 +1,26 @@
+<h1>Aqui va el mapa de Google Maps</h1>
+
+{{!-- ABAJO ESTÁ COPIADO LO Q VIENE EN LRN PARA CREAR MAPA EN HTML y falta cambiar clave API--}}
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Map</title>
+    <style>
+       #map {
+        height: 500px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My First Map</h3>
+    <div id="map"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=MAPSKEY"></script> 
+    <script type="text/javascript" src="map.js"></script>
+  </body>
+</html>
+
+{{!-- LINEA 21 tiene que tener la clave de la API de google que está escrita en .env --}}
