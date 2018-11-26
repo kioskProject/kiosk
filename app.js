@@ -33,6 +33,16 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+// Enable authentication using session + passport
+app.use(session({
+  secret: 'irongenerator',
+  resave: true,
+  saveUninitialized: true,
+  store: new MongoStore( { mongooseConnection: mongoose.connection })
+}))
+app.use(flash());
+require('./passport')(app);
+    
 
 // Express View engine setup
 
@@ -47,7 +57,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
-
+app.use((req, res, next) => {
+  if (req.user) {
+    app.locals.user = req.user;
+  } else {
+    app.locals.user = null;
+  }
+  next();
+ });
 
 hbs.registerHelper('ifUndefined', (value, options) => {
   if (arguments.length < 2)
@@ -64,16 +81,8 @@ hbs.registerHelper('ifUndefined', (value, options) => {
 app.locals.title = 'Express - Generated with IronGenerator';
 
 
-// Enable authentication using session + passport
-app.use(session({
-  secret: 'irongenerator',
-  resave: true,
-  saveUninitialized: true,
-  store: new MongoStore( { mongooseConnection: mongoose.connection })
-}))
-app.use(flash());
-require('./passport')(app);
-    
+
+
 
 const index = require('./routes/index');
 app.use('/', index);
