@@ -35,7 +35,7 @@ let users = [
 let kiosks = [
 {
   kioskName: "Kiosk America",
-  location: "AV. AMÉRICA",
+  location: "AV. AMÉRICA", //CAMBIAR LOCATION PONER STRINGS
   wifi: true,
   drinks: true,
   internationalPress: true,
@@ -62,6 +62,21 @@ let kiosks = [
   picPath: 'https://res.cloudinary.com/dum6ps32a/image/upload/v1543246298/kiosk/images.jpg',
   picName: "foo"
 }
+]
+
+let comments = 
+[
+  {
+    picPath: "https://res.cloudinary.com/dum6ps32a/image/upload/v1543246298/kiosk/images.jpg",
+    picName: "foo",
+    kioskName: "Your Kiosk",
+    rate: 5,
+    comments: [{ body: "HOLA ESTE ES MI COOMMENT", date: Date }], // poner date a mano?
+    date: { type: Date, default: Date.now }, //sobra este date?
+    author: {type: Schema.Types.ObjectId, rel: "User"} //cómo indicarlo a mano?
+   
+  }
+
 ]
 
 

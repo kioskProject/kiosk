@@ -8,6 +8,7 @@ const commentSchema = new Schema({
   rate: Number,
   comments: [{ body: String, date: Date }],
   date: { type: Date, default: Date.now },
+  author: {type: Schema.Types.ObjectId, rel: "User"}
  
 }, {
   timestamps: {
