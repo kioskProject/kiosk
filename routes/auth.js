@@ -2,7 +2,7 @@ const express = require("express");
 const passport = require("passport");
 const router = express.Router();
 const User = require("../models/User");
-const uploadCloud = require('../config/cloudinary');
+const uploadCloud = require("../config/cloudinary");
 
 // Bcrypt to encrypt passwords
 const bcrypt = require("bcrypt");
@@ -27,14 +27,12 @@ router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
 
-router.post("/signup", uploadCloud.single('photo'), (req, res, next) => {
+router.post("/signup", uploadCloud.single("photo"), (req, res, next) => {
   // const username = req.body.username;
   // const password = req.body.password;
   // const email = req.body.email;
   // const picPath = req.file.url;
   // const picName = req.file.originalname;
-
-  console.log(req.file)
 
   const picPath = req.file.url;
   const picName = req.file.originalname;
@@ -59,13 +57,19 @@ router.post("/signup", uploadCloud.single('photo'), (req, res, next) => {
       password: hashPass,
       email,
       picPath,
-      picName,
+      picName
     });
 
     newUser
       .save()
-      .then((user) => {
-        res.redirect("/auth/login");
+      .then(user => {
+        req.login(newUser, function(err) {
+          if (!err) {
+            res.redirect("/auth/myProfile");
+          } else {
+            res.render("error", err);
+          }
+        });
       })
       .catch(err => {
         res.render("auth/signup", { message: "Something went wrong" });
