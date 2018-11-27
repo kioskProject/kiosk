@@ -13,4 +13,16 @@ router.get("/" , ensureLoggedIn("/auth/login"), (req, res, next) => {
     res.render("comments", {comment})  // confirmar comment y de donde viene
   }).catch(err => next(err))
 })
+
+router.get("/:id" , ensureLoggedIn("/auth/login"), (req, res, next) => {
+  Comment.find({kiosk:req.params.id})
+  .populate('author')  //podemos añadir aquí tb password
+  .populate('kiosk')
+  .then(comment => {
+    console.log(comment)
+    res.render("comments", {comment})  // confirmar comment y de donde viene
+  }).catch(err => next(err))
+})
+
+
 module.exports = router;
