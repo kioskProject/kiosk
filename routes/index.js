@@ -22,7 +22,8 @@ router.get("/comments" , (req, res) => {
   Comment.find()
   .populate("author")  //podemos añadir aquí tb password
   .then(comment => {
-    res.render("comments", {comment})  // confirmar comment y de donde viene
+    console.log(comment)
+    res.render("comments", {comment})  // el comment se refiere al array de comment con todos los comment
   })
 })
 

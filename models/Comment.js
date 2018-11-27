@@ -6,9 +6,9 @@ const commentSchema = new Schema({
   picName: String,
   kioskName: String,
   rate: Number,
-  comments: [{ body: String, date: Date }],
+  comments: { type: String },
   date: { type: Date, default: Date.now },
-  author: {type: Schema.Types.ObjectId, rel: "User"}
+  author: {type: Schema.Types.ObjectId, ref: "User"}
  
 }, {
   timestamps: {

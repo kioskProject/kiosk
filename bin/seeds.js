@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const User = require("../models/User");
 const Kiosk = require("../models/Kiosk");
+const Comment = require("../models/Comment");
 
 const bcryptSalt = 10;
 
@@ -65,19 +66,17 @@ let kiosks = [
 ]
 
 let comments = 
-[
+
   {
     picPath: "https://res.cloudinary.com/dum6ps32a/image/upload/v1543246298/kiosk/images.jpg",
     picName: "foo",
     kioskName: "Your Kiosk",
     rate: 5,
-    comments: [{ body: "HOLA ESTE ES MI COOMMENT", date: Date }], // poner date a mano?
-    date: { type: Date, default: Date.now }, //sobra este date?
-    author: {type: Schema.Types.ObjectId, rel: "User"} //cómo indicarlo a mano?
-   
+    comments: "HOLA ESTE ES MI COOMMENT",  
+    // text: String
   }
 
-]
+
 
 
 const Promise1 = 
@@ -86,9 +85,15 @@ User.deleteMany()
     return User.create(users)
   })
   .then(usersCreated => {
+    comments.author = usersCreated[0]._id;
     console.log(`${usersCreated.length} users created with the following id:`);
     console.log(usersCreated.map(u => u._id));
+    return Comment.create(comments)
   })
+
+   
+
+
 
 const Promise2 =
   Kiosk.deleteMany()
@@ -98,8 +103,25 @@ const Promise2 =
   })
   .then(kiosksCreated => {
     console.log(`${kiosksCreated.length} kiosks created with the following id:`);
-    console.log(kiosksCreated.map(u => u._id)); // CAMBIAR u.id PARA kiosk
+    console.log(kiosksCreated.map(u => u._id)); // CAMBIAR u.id PARA kiosk ????
   })
+
+  
+
+//   ////////  CREA COMENTARIOS y aqui en seeds
+//   const Promise3 =
+//   Comment.deleteMany()
+//   .then(() => {
+//     return Comment.create(comments)
+//   })
+//   .then(commentsCreated => {
+//     console.log(`${commentsCreated.length} comments created with the following id:`);
+//     console.log(commentsCreated.map(u => u._id));
+//   })
+  
+
+// ///////// .drop()
+
 
 Promise.all([Promise1, Promise2])
 .then(() => {
