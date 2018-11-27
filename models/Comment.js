@@ -4,11 +4,12 @@ const Schema   = mongoose.Schema;
 const commentSchema = new Schema({
   picPath: String,
   picName: String,
-  kioskName: String,
+  //kioskName: String,
   rate: Number,
-  comments: { type: String },
+  comments: String,
   date: { type: Date, default: Date.now },
-  author: {type: Schema.Types.ObjectId, ref: "User"}
+  author: {type: Schema.Types.ObjectId, ref: "User"},
+  kiosk: {type: Schema.Types.ObjectId, ref: "Kiosk"}
  
 }, {
   timestamps: {

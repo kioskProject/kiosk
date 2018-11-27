@@ -18,13 +18,10 @@ router.use("/editProfile", editProfileRoutes);
 
 
 
-router.get("/comments" , (req, res) => {
-  Comment.find()
-  .populate("author")  //podemos añadir aquí tb password
-  .then(comment => {
-    console.log(comment)
-    res.render("comments", {comment})  // el comment se refiere al array de comment con todos los comment
-  })
-})
+
+
+router.get('/kioskPlaces', (req, res, next) => {
+  res.render('places');
+});
 
 module.exports = router;
