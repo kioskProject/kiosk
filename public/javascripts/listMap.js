@@ -7,3 +7,6 @@ const myMarker = new google.maps.Marker({
   map: map,
   title: "I'm here"
 });
+
+
+// foreach () markers
