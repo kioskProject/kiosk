@@ -18,13 +18,7 @@ router.use("/editProfile", editProfileRoutes);
 
 
 
-router.get("/comments" , (req, res) => {
-  Comment.find()
-  .populate("author")  //podemos añadir aquí tb password
-  .then(comment => {
-    res.render("comments", {comment})  // confirmar comment y de donde viene
-  })
-})
+
 
 router.get('/kioskPlaces', (req, res, next) => {
   res.render('places');
