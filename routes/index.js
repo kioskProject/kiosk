@@ -26,4 +26,8 @@ router.get("/comments" , (req, res) => {
   })
 })
 
+router.get('/kioskPlaces', (req, res, next) => {
+  res.render('places');
+});
+
 module.exports = router;
