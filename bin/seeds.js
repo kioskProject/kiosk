@@ -106,21 +106,7 @@ const Promise2 =
     console.log(kiosksCreated.map(u => u._id)); // CAMBIAR u.id PARA kiosk ????
   })
 
-  
 
-//   ////////  CREA COMENTARIOS y aqui en seeds
-//   const Promise3 =
-//   Comment.deleteMany()
-//   .then(() => {
-//     return Comment.create(comments)
-//   })
-//   .then(commentsCreated => {
-//     console.log(`${commentsCreated.length} comments created with the following id:`);
-//     console.log(commentsCreated.map(u => u._id));
-//   })
-  
-
-// ///////// .drop()
 
 
 Promise.all([Promise1, Promise2])
