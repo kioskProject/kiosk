@@ -28,3 +28,16 @@ p.clasificacion label:hover ~ label,
 p.clasificacion input:checked ~ label {
   color: #FFD700
 }
+
+.titleSignup {
+  margin: 100px 400px 50px 750px;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.signup {
+  margin: 90px 400px 200px 600px;
+  background-color: #fdf5e6;
+  width: 500px;
+  border-color: black;
+  border-width:2px;
+}
