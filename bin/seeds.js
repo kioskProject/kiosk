@@ -14,7 +14,7 @@ const bcryptSalt = 10;
 
 mongoose
   .connect(
-    "mongodb://localhost/kiosk-project",
+    process.env.DB,
     { useNewUrlParser: true }
   )
   .then(x => {
