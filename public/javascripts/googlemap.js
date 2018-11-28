@@ -1,8 +1,8 @@
-// AQUÍ ABAJO VA API GOOGLE
+
 
 
 function startMap(center) {
-  const ironhackBCN = {
+  const BCN = {
   	lat:  40.3923653,
   	lng: -3.6985298};
   const map = new google.maps.Map(
@@ -12,7 +12,23 @@ function startMap(center) {
       center: center
     }
   );
-  
+
+  window.kiosk.forEach(place => {
+    new google.maps.Marker({
+      position: {
+        lat:place.location.latitude,
+        lng:place.location.longitude
+      },
+      map: map,
+      title: place.name
+    });
+  })
 }
+
+//////////// LO DE ABAJO
+marker.addListener('click', function() {
+  map.setZoom(8);
+  map.setCenter(marker.getPosition());
+});
 
 geolocalize().then(you => startMap(you))

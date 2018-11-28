@@ -42,7 +42,6 @@ let users = [
 let kiosks = [
   {
     kioskName: "Kiosk America",
-    location: "AV. AMÉRICA", //CAMBIAR LOCATION PONER STRINGS
     wifi: true,
     drinks: true,
     internationalPress: true,
@@ -53,12 +52,15 @@ let kiosks = [
     rate: 3,
     picPath:
       "https://res.cloudinary.com/dum6ps32a/image/upload/v1543241847/kiosk/periodico_opt.jpg",
-    picName: "black"
+    picName: "black",
+    location: {
+      latitude:40.401122,
+      longitude: -3.753464
+    }
   },
 
   {
     kioskName: "Your Kiosk",
-    location: "Paseo Castellana",
     wifi: true,
     drinks: true,
     internationalPress: true,
@@ -69,7 +71,11 @@ let kiosks = [
     rate: 4,
     picPath:
       "https://res.cloudinary.com/dum6ps32a/image/upload/v1543246298/kiosk/images.jpg",
-    picName: "foo"
+    picName: "foo",
+    location: {
+      latitude:40.438299,
+      longitude: -3.586215
+    }
   }
 ];
 
@@ -79,7 +85,7 @@ let comments = {
   picName: "foo",
   kioskName: "Your Kiosk",
   rate: 5,
-  comments: "HOLA ESTE ES MI COOMMENT" // poner date a mano?
+  comments: "HOLA ESTE ES MI COOMMENT" 
 };
 
 const Promise1 = User.deleteMany().then(() => {

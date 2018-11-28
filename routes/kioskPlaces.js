@@ -9,4 +9,28 @@ router.get('/', ensureLoggedIn("/auth/login"),(req, res, next) => {
   
 });
 
+
+
+
+
+router.post('/new', (req, res, next) => {
+
+  let newKiosk = {
+    name: req.body.newKioskName,
+    description: req.body.newKioskDesc,
+    
+    location: {
+      
+      latitude: Number(req.body.newKioskLatitude), 
+      longitude: Number(req.body.newKioskLongitude)  // cómo rel las coordenadas newKioskLoc
+    }
+  }
+  console.log(newKiosk);
+  Kiosk.create(newKiosk).then( kiosk => {
+    res.redirect('/kioskPlaces');
+  }).catch(e=> next(e));
+});
+
+
+
 module.exports = router;
