@@ -1,25 +1,41 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+<h1 class="titleSignup"> Log in</h1>
+<div class="signup">
 
-<h2>Login</h2>
 
-<form action="/auth/login" method="POST" id="form-container">
-  <label for="username">Username</label>
-  <input id="username" type="text" name="username" placeholder="Your Username">
+  <div class="row">
 
-  <br><br>
+    <div class="row">
+      <div class="input-field col s12">
+        <form action="/auth/login" method="POST" id="form-container" class="col s12">
+          <label for="username">Username</label>
+          <input id="username" type="text" name="username" placeholder="Your Username" class="validate">
 
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
-  
-  <br>
-  {{#if message }}
-    <div class="error-message">{{ message }}</div>
-  {{/if}}
-  <br><br>
+          <br><br>
 
-  <button>Login</button>
+          <label for="password">Password</label>
+          <input id="password" type="password" name="password" placeholder="Your password">
 
-  <p class="account-message">
-    Don't have an account yet?
-    <a href="/auth/signup">Signup</a>
-  </p>
-</form>
+          <br>
+          {{#if message }}
+          <div class="error-message">{{ message }}</div>
+          {{/if}}
+          <br><br>
+
+          {{!-- <button>Login</button> --}}
+
+          <button class="btn waves-effect waves-light">
+            <i class="material-icons right"></i>
+            Login</button>
+
+          <br><br>
+          <p class="account-message">
+            Don't have an account yet?
+            <a href="/auth/signup">Signup</a>
+          </p>
+        </form>
+
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -35,8 +35,25 @@ p.clasificacion input:checked ~ label {
   border-color: black;
   border-width: 2px; }
 
+.titleProfile {
+  text-align: center;
+  top: 30px;
+  height: 200px; }
+
+.profile {
+  background-color: #fdf5e6;
+  border-color: black;
+  border-width: 2px;
+  width: 700px;
+  height: 300px;
+  margin: 90px 400px 200px 600px; }
+
+.buttonProfile {
+  margin-left: 500px;
+  background-color: red; }
+
 .banner {
-  background-image: url("https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/ironhack-skydive-background.jpg");
+  background-image: url(/);
   background-color: #000;
   background-position: center;
   background-size: cover;
