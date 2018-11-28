@@ -12,20 +12,36 @@
 
   <nav>
     {{#if user}}
-    <a href="/auth/logout">Logout</a>
-    <a href="/">Home</a>
+    <a href="/">Kiosk</a>
     <a href="/maps">Map</a>
     <a href="/comments">Comments</a>
     <a href="/kioskPlaces">Kiosks</a>
+    <a href="/auth/logout">Logout</a>
     {{else}}
     
     <a href="/auth/login">Login</a>
     <a href="/auth/signup">Signup</a>
     {{/if}}
 
+    {{!-- {{#if window.location}} --}}
+
   </nav>
 
   {{{body}}}
+
+  <footer>
+
+    <div class ="">
+    
+    <p>Site made by Patricia & Norma</p>
+  </div>
+
+  <div class ="">
+    
+    <p> Copyright &copy; Kiosk</p>
+  </div>
+   
+  </footer>
 
   <script src="/javascripts/script.js"></script>
 </body>
