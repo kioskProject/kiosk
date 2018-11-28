@@ -28,12 +28,6 @@ router.get("/signup", (req, res, next) => {
 });
 
 router.post("/signup", uploadCloud.single("photo"), (req, res, next) => {
-  // const username = req.body.username;
-  // const password = req.body.password;
-  // const email = req.body.email;
-  // const picPath = req.file.url;
-  // const picName = req.file.originalname;
-
   const picPath = req.file.url;
   const picName = req.file.originalname;
   const { username, email, password } = req.body;

@@ -77,10 +77,12 @@ let comments = {
   picPath:
     "https://res.cloudinary.com/dum6ps32a/image/upload/v1543246298/kiosk/images.jpg",
   picName: "foo",
-  kioskName: "Your Kiosk",
+  kioskName: "Kiosk America",
   rate: 5,
   comments: "HOLA ESTE ES MI COOMMENT" // poner date a mano?
 };
+
+
 
 const Promise1 = User.deleteMany().then(() => {
   return User.create(users);

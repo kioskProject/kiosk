@@ -1,3 +1,9 @@
 <h1>Aqui va la pagina de comentarios.</h1>
 
-{{comment.0.author.username}} - {{comment.0.kiosk.kioskName}}
+<ul>
+  {{#each comment}}
+  {{>commentsKiosk this}}
+  {{/each}}
+</ul>
+
+

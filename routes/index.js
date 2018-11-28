@@ -24,4 +24,5 @@ router.get('/kioskPlaces', (req, res, next) => {
   res.render('places');
 });
 
+
 module.exports = router;

@@ -5,4 +5,23 @@ body {
 a {
   color: #00B7FF; }
 
+p.clasificacion {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 40px; }
+
+p.clasificacion input {
+  position: absolute;
+  top: -100px; }
+
+p.clasificacion label {
+  float: right;
+  color: #333; }
+
+p.clasificacion label:hover,
+p.clasificacion label:hover ~ label,
+p.clasificacion input:checked ~ label {
+  color: #FFD700; }
+
 /*# sourceMappingURL=style.css.map */
