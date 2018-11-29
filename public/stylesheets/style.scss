@@ -175,13 +175,33 @@ p.clasificacion input:checked ~ label {
 }
 
 .containerKiosk {
-  padding: 100x 50px 50px 50px;
+  padding: 100px 50px 50px 50px;
   display: flex;
-  
-
+ 
 }
 
-.elementsKiosk{
+// .elementsKiosk{
+//   border: 20px solid red;
+//  
+// }
+
+.buttons-container{
+  text-align: center;
+}
+
+.titlePartial{
+  font-weight:bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+}
+
+.commentsKiosk {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.boxComments {
   align-items: center;
-  flex-direction: row;
 }

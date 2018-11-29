@@ -1,9 +1,13 @@
+<div class = "commentsKiosk">
+
+
 {{#if comment}}
 <img src="{{comment.0.kiosk.picPath}}" alt="">
 {{else}}
 <img src="{{kiosk.picPath}}" alt="">
 {{/if}}
 
+<div class = "boxComments"></div>
 <form action="/comments" method="post">
 
   Comment: <textarea name="commentsKiosk"></textarea><br />
@@ -24,9 +28,11 @@
   <input type="submit" value="Send">
 </form>
 
+</div>
 
 <ul>
   {{#each comment}}
   {{>commentsKiosk this}}
   {{/each}}
 </ul>
+

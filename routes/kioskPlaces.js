@@ -4,8 +4,15 @@ const { ensureLoggedIn, ensureLoggedOut } = require("connect-ensure-login");
 const Kiosk = require("../models/Kiosk");
 
 router.get('/', ensureLoggedIn("/auth/login"),(req, res, next) => {
-  Kiosk.find()
-  .then(kiosks => res.render('kioskPlaces', {kiosks}))
+  Kiosk.find({})
+  .then(function (kiosks){
+   /*  kiosks.map(function(_id){
+      _id = _id.toString()
+    });
+ */
+    res.render('kioskPlaces', {kiosks, kiosksString: JSON.stringify(kiosks)})
+ });
+   
   
 });
 
