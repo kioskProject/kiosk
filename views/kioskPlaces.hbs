@@ -13,7 +13,6 @@
       let kioskData = window.kiosks[$(e.target).data("kiosk-order")];
 
       document.querySelector(".modal-kiosk-name").innerText = kioskData.kioskName;
-      document.querySelector(".modal-kiosk-location").innerText = kioskData.location.latitude + "|||||" + kioskData.location.longitude;
       document.querySelector(".modal-kiosk-wifi").innerText = kioskData.wifi ? "Yes" : "No";
       document.querySelector(".modal-kiosk-cigarettes").innerText = kioskData.cigarettes ? "Yes" : "No";
       document.querySelector(".modal-kiosk-souvernis").innerText = kioskData.souvenirs ? "Yes" : "No";
@@ -41,11 +40,10 @@
             <br><br>
 
             <li>Name: <span class="modal-kiosk-name"></span></li>
-            <li>Location: <span class="modal-kiosk-location"></span></li>
             <li>Drinks: <span class="modal-kiosk-drinks"></span></li>
             <li>Souvernis: <span class="modal-kiosk-souvernis"></span></li>
             <li>Wifi: <span class="modal-kiosk-wifi"></span></li>
-            <li>Cigarretes: <span class="modal-kiosk-cigarettes"></span></li>
+            <li>Cigarettes: <span class="modal-kiosk-cigarettes"></span></li>
 
 
             {{!--

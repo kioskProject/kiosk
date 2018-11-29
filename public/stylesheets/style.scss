@@ -5,7 +5,7 @@ body {
 .navKiosk {
   display: flex;
   justify-content: flex-end;
-  height: 90px;
+  height: 70px;
   background-color: black;
 }
 
@@ -175,17 +175,12 @@ p.clasificacion input:checked ~ label {
 }
 
 
-// ------
+
 .containerKiosk {
   padding: 100px 50px 50px 50px;
   display: flex;
  
 }
-
-// .elementsKiosk{
-//   border: 20px solid red;
-//  
-// }
 
 .buttons-container{
   text-align: center;
@@ -201,15 +196,38 @@ p.clasificacion input:checked ~ label {
 .commentsKiosk {
   display: flex;
   justify-content: center;
-  margin-top: 70px;
+  padding: 90px 30px 30px 30px ;
 }
 
 .boxComments {
-  align-items: center;
+  flex-wrap: nowrap ;
+  text-align: center;
 }
-// -------
 
-//TYPE OF SERVICES:
+.commentFormKiosk {
+  font-size: 30px;
+  padding-top: 30px;
+  padding-left: 40px;
+}
+
+.box {
+  width: 700px;
+  height: 100px;
+  border: solid 2px black;
+}
+.buttonSend {
+  background-color: #5f9ea0;
+  font-size: 20px;
+  padding: 20px 40px 20px 40px ;
+  color: white;
+  height: 60px;
+}
+
+.titleComments {
+  font-size: 30px;
+  
+
+}
 
 .sect--type{
   background-image: url('../images/backgroundHome.jpeg');
@@ -254,5 +272,5 @@ p.clasificacion input:checked ~ label {
 }
 
 
-//-----
+
 

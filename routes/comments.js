@@ -24,7 +24,7 @@ router.get("/:id", ensureLoggedIn("/auth/login"), (req, res, next) => {
 
       if(comment.length == 0) {
         Kiosk.findById(req.params.id)
-        .then(kiosk => res.render('commentsForm', {kiosk}))
+        .then(kiosk => res.render('commentsForm', {kiosk, comment:[{kiosk:{_id:kiosk._id}}]}))
       }else{
         res.render("commentsForm", { comment });
       }

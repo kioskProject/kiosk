@@ -1,17 +1,22 @@
 <div class = "commentsKiosk">
 
-
-{{#if comment}}
-<img src="{{comment.0.kiosk.picPath}}" alt="">
+<div class = "boxComments">
+{{#if kiosk}}
+<img src="{{kiosk.picPath}}" width= "700px" alt="">
 {{else}}
-<img src="{{kiosk.picPath}}" alt="">
+<img src="{{comment.0.kiosk.picPath}}"  width= "700px" alt="">
 {{/if}}
 
-<div class = "boxComments"></div>
+<br>
 <form action="/comments" method="post">
 
-  Comment: <textarea name="commentsKiosk"></textarea><br />
-  <p>Kiosk Valuation</p>
+  
+  <h1 class= "commentFormKiosk">Comment</h1>  
+  <br>
+  <textarea class = "box" placeholder= "Write your comment" name="commentsKiosk"></textarea><br />
+
+  <p class = "commentFormKiosk">Kiosk Valuation</p>
+  <br>
   <p class="clasificacion">
     <input id="radio1" type="radio" name="estrellas" value="1">
     <label for="radio1">★</label>
@@ -24,8 +29,10 @@
     <input id="radio5" type="radio" name="estrellas" value="5">
     <label for="radio5">★</label>
   </p>
+  <br>
   <input type="hidden" name="kiosk" value="{{comment.0.kiosk._id}}">
-  <input type="submit" value="Send">
+  <br>
+  <input type="submit" value="Send" class= "buttonSend">
 </form>
 
 </div>
