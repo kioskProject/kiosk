@@ -23,6 +23,16 @@
   <input id="latitude" type="hidden" name="newKioskLatitude">
   <input id="longitude" type="hidden" name="newKioskLongitude">
   <input id="description" type="text" name="newKioskDesc" placeholder="Descripción">
+  
+  <input class="myChoice" type="checkbox" name="wifi" value="false"><label for="wifi">WiFi</label> 
+  <input class="myChoice" type="checkbox" name="cigarettes" value="false"><label for="cigarettes">Cigarettes</label>
+  <input class="myChoice" type="checkbox" name="drinks" value="false"><label for="drinks">Drinks</label>
+
+{{!-- en value va.. --}}
+
+
+  
+  
   <button type="submit" class="button">AÑADIR NUEVO KIOSKO</button>
 
 </form>
@@ -30,6 +40,7 @@
 </>
 {{!--  --}}
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
   <script>window.kiosk = {{{kiosk}}}</script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApM0H8i-9V4kDgjug0RW04LOwSRV18uYw"></script>
   <script type="text/javascript" src="/javascripts/geolocalize.js"></script>
