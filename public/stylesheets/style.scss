@@ -1,11 +1,30 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.navKiosk {
+  display: flex;
+  justify-content: flex-end;
+  height: 90px;
+  background-color: black;
 }
+
+a:link {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 20px 20px 20px ;
+  align-items: center;
+
+}
+a:visited {color: white;}
+
+a:hover {
+  color: white;
+  font-size: 22px;
+  font-family: arial;
+  text-decoration: none;
+}
+
 p.clasificacion {
   position: relative;
   overflow: hidden;
@@ -26,12 +45,12 @@ p.clasificacion label {
 p.clasificacion label:hover,
 p.clasificacion label:hover ~ label,
 p.clasificacion input:checked ~ label {
-  color: #FFD700
+  color: #ffd700;
 }
 
 .titleSignup {
   margin: 100px 400px 50px 750px;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: "Shadows Into Light", cursive;
 }
 
 .signup {
@@ -39,22 +58,26 @@ p.clasificacion input:checked ~ label {
   background-color: #fdf5e6;
   width: 500px;
   border-color: black;
-  border-width:2px;
-}
+  border-width: 2px;
+  padding-top: 25px;
+  }
 
+.fontForm {
+  font-size: 20px;
+  color: black;
+}
 .titleProfile {
   text-align: center;
   top: 30px;
   height: 200px;
 }
 .profile {
-  background-color:#fdf5e6;;
+  background-color: #fdf5e6;
   border-color: black;
-  border-width:2px;
+  border-width: 2px;
   width: 700px;
   height: 300px;
   margin: 90px 400px 200px 600px;
-
 }
 
 .buttonProfile {
@@ -62,32 +85,16 @@ p.clasificacion input:checked ~ label {
   background-color: red;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.banner{
-background-image: url(/);
-background-color:#000;
-background-position: center;
-background-size: cover;
-background-attachment: fixed;
-display: table;
-width: 100%;
-height: 100%;
-position: relative;
+.banner {
+  background-image: url(/);
+  background-color: #000;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .banner__overlay {
@@ -97,9 +104,9 @@ position: relative;
   width: 100%;
   display: table;
   height: 100%;
-  text-align:center;
-  background-color: rgba(0,0,0,0.4);
-  animation: banner-in 2s ;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: banner-in 2s;
 }
 
 .banner__container {
@@ -125,7 +132,6 @@ position: relative;
   animation: opacity 3s;
 }
 
-
 .btn {
   color: #fff;
   padding: 10px 20px;
@@ -135,7 +141,7 @@ position: relative;
   background-color: #daa37f;
   border-radius: 0;
   text-align: center;
-text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .btn--opacity {
