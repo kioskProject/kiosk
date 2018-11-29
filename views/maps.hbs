@@ -9,20 +9,19 @@
     </style>
 </head>
 
-<body class="image">
- <h1>Aquí va el mapa de Google Maps</h1>
+<body class="image " >
+ <h1>Look for your Kiosk</h1>
 
-  <h3>My First Map</h3>
   <div id="map"></div>
   
 {{!-- FORM --}}
-<div class="form"> 
+<div class="mapForm"> 
 
   <form id="form" action="/kioskPlaces/new" enctype="multipart/form-data" method="POST">
   <input id="newName" type="text" name="newKioskName" placeholder="Nombre del kiosko">
   <input id="latitude" type="hidden" name="newKioskLatitude">
   <input id="longitude" type="hidden" name="newKioskLongitude">
-  <input id="description" type="text" name="newKioskDesc" placeholder="Descripción">
+  <textarea id="description" type="text" name="newKioskDesc" placeholder="Descripción"></textarea>
  
   <label>Choose your file</label>
   <input type="file" name="photo">
