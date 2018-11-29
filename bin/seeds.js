@@ -51,8 +51,8 @@ let kiosks = [
       "https://res.cloudinary.com/dum6ps32a/image/upload/v1543241847/kiosk/periodico_opt.jpg",
     picName: "black",
     location: {
-      latitude:40.401122,
-      longitude: -3.753464
+      latitude:40.394889,
+      longitude: -3.695048
     }
   },
 
