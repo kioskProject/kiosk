@@ -2,6 +2,7 @@ const express = require('express');
 const router  = express.Router();
 const { ensureLoggedIn, ensureLoggedOut } = require("connect-ensure-login");
 const Kiosk = require("../models/Kiosk");
+const uploadCloud = require("../config/cloudinary");
 
 router.get('/', ensureLoggedIn("/auth/login"),(req, res, next) => {
   Kiosk.find({})
@@ -20,7 +21,10 @@ router.get('/', ensureLoggedIn("/auth/login"),(req, res, next) => {
 
 
 
-router.post('/new', (req, res, next) => {
+router.post('/new', uploadCloud.single("photo"), (req, res, next) => {
+
+  const picPath = req.file.url;
+  const picName = req.file.originalname;
 
   let wifi = req.body.wifi == 'on' ? true : false;
   let drinks = req.body.drinks == 'on' ? true : false;
@@ -34,6 +38,8 @@ router.post('/new', (req, res, next) => {
     drinks,
     souvenirs,
     cigarettes,
+    picPath,
+    picName,
 
     location: {
       latitude: Number(req.body.newKioskLatitude), 
