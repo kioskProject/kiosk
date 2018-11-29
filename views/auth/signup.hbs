@@ -27,7 +27,7 @@
 
           <label>Choose your file</label>
           <input type="file" name="photo">
-          <div><img src="{{this.picPath}}" alt=""></div>
+          
 
           {{#if message }}
           <div class="error-message">{{ message }}</div>
@@ -41,7 +41,7 @@
           <br><br>
           <p class="account-message">
             Do you already have an account?
-            <a href="/auth/login">Login</a>
+            <a class="linkForm"href="/auth/login">Login</a>
           </p>
         </form>
 

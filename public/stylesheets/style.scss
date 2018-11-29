@@ -25,6 +25,23 @@ a:hover {
   text-decoration: none;
 }
 
+a.linkForm {
+ color: black;
+}
+a.linkForm:visited {
+  color:black;
+}
+
+.modal-body {
+  text-align: center;
+  font-size: 17px;
+}
+
+.titleModal {
+ text-decoration-line: underline;
+ font-weight:bold;
+}
+
 p.clasificacion {
   position: relative;
   overflow: hidden;
@@ -155,4 +172,16 @@ p.clasificacion input:checked ~ label {
   margin-left: -12px;
   cursor: pointer;
   animation: opacity 3s;
+}
+
+.containerKiosk {
+  padding: 100x 50px 50px 50px;
+  display: flex;
+  
+
+}
+
+.elementsKiosk{
+  align-items: center;
+  flex-direction: row;
 }

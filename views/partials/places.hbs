@@ -1,8 +1,14 @@
-<img src="{{this.picPath}}" alt="">
+
+<div class = "containerKiosk">
+
+
+<div class = "elementsKiosk">
+<img src="{{this.picPath}}" alt="" height="300px" width= "400px">
+
 <h1>{{this.kioskName}}</h1>
 
 <button type="button" class="btn btn-primary">
-<a href="/comments/{{this.id}}">Comments</a>
+  <a href="/comments/{{this.id}}">Comments</a>
 </button>
 
 
@@ -17,7 +23,9 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Details Kiosk</h5>
+        <h5 class="modal-title" id="exampleModalLabel">
+          <h1 class = "titleModal">Details Kiosk</h1>
+        </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -25,15 +33,37 @@
       <div class="modal-body">
 
         <ul>
-          <li><img src="{{this.picPath}}" alt="" width = "300px"> </li>
-          <li>{{this.kioskName}}</li>
-          <li> {{this.location}}</li>
-          <li>{{this.wifi}}</li>
-          <li>{{this.drinks}}</li>
-          <li>{{this.internationalPress}}</li>
-          <li>{{this.cards}}</li>
-          <li>{{this.kidsCards}}</li>
-          <li>{{this.cigarettes}}</li>
+          <li><img src="{{this.picPath}}" alt="" width="300px"> </li>
+          <br><br>
+          <li class= "titleModal">{{this.kioskName}}</li>
+            <br><br>
+
+          <li> <b>Location:</b>
+            {{#if this.location}} Yes
+            {{else}} No
+            {{/if}}
+          </li>
+          <li><b>Wifi: </b>
+            {{#if this.wifi}} Yes
+            {{else}} No
+            {{/if}}
+          </li>
+          <li> Drinks:
+            {{#if this.drinks}} Yes
+            {{else}} No
+            {{/if}}
+          </li>
+          <li>
+          <li>Cigarretes:
+            {{#if this.cigarettes}} Yes
+            {{else}} No
+            {{/if}}
+          </li>
+          <li>Souvenirs:
+            {{#if this.souvenirs}} Yes
+            {{else}} No
+            {{/if}}
+          </li>
           <li>{{this.rate}}</li>
 
         </ul>
@@ -45,4 +75,6 @@
       </div>
     </div>
   </div>
+</div>
+</div>
 </div>

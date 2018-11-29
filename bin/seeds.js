@@ -44,10 +44,7 @@ let kiosks = [
     kioskName: "Kiosk America",
     wifi: true,
     drinks: true,
-    internationalPress: true,
-    cards: true,
     souvenirs: true,
-    kidsCards: true,
     cigarettes: true,
     rate: 3,
     picPath:
@@ -63,10 +60,7 @@ let kiosks = [
     kioskName: "Your Kiosk",
     wifi: true,
     drinks: true,
-    internationalPress: true,
-    cards: true,
     souvenirs: true,
-    kidsCards: true,
     cigarettes: true,
     rate: 4,
     picPath:
