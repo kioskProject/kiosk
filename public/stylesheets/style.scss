@@ -121,7 +121,7 @@ p.clasificacion input:checked ~ label {
 
 .banner {
   background-image: url("/images/HOMEpicture.jpg");
-  background-color: #000;
+  
   background-position: center;
   background-size: contain;
   background-attachment: fixed;
@@ -131,6 +131,7 @@ p.clasificacion input:checked ~ label {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 620px;
 }
 
 .banner__overlay {
@@ -158,8 +159,17 @@ p.clasificacion input:checked ~ label {
   animation: opacity 3s;
 }
 
-.row {
+.centerTextHome{
+  margin: 0 auto;
+}
+
+.pHome{
   display: block;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
 }
 .btn {
   color: #fff;
@@ -257,9 +267,7 @@ p.clasificacion input:checked ~ label {
  
 
 }
-.cardColor {
-  
-}
+
 
 .card-action{
   color: white;
@@ -387,4 +395,11 @@ footer{
   background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
+}
+
+
+.btnSearch{
+  margin: 0px 0px 10px 0px;
+  padding: 10px;
+  font-size: 10px;
 }
