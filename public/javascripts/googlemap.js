@@ -1,6 +1,8 @@
 
 
 
+
+
 function startMap(center) {
   const BCN = {
   	lat:  40.3923653,
@@ -30,5 +32,14 @@ marker.addListener('click', function() {
   map.setZoom(8);
   map.setCenter(marker.getPosition());
 });
+
+//////
+$(document).ready(function() {
+  $(".myClass").click(function(event) {
+    //ADD TO BD
+  
+  });
+});
+
 
 geolocalize().then(you => startMap(you))
