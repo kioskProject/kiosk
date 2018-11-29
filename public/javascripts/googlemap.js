@@ -18,7 +18,6 @@ function startMap(center) {
     }
   );
 
-
   var marker = new google.maps.Marker({
     position: location,
     map: map,
@@ -53,16 +52,5 @@ function startMap(center) {
     });
   })
 }
-
-
-
-//////TO ADD WHAT IS IN THE CHEKBOX  TO THE DB
-// $(document).ready(function() {
-//   $(".myChoice").click(function(event) {
-
-
-
-
-// startMap();
 
 geolocalize().then(myLocation => startMap(myLocation))

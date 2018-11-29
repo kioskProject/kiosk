@@ -17,15 +17,20 @@
   
 {{!-- FORM --}}
 <div class="form"> 
-  
-    <form action="/kioskPlaces/new" method="POST">
-    <input id="newName" type="text" name="newKioskName" placeholder="Nombre del kiosko">
+
+  <form id="form" action="/kioskPlaces/new" method="POST">
+  <input id="newName" type="text" name="newKioskName" placeholder="Nombre del kiosko">
   <input id="latitude" type="hidden" name="newKioskLatitude">
   <input id="longitude" type="hidden" name="newKioskLongitude">
   <input id="description" type="text" name="newKioskDesc" placeholder="Descripción">
   <button type="submit" class="button">AÑADIR NUEVO KIOSKO</button>
 
-</form>
+  <input class="myChoice" type="checkbox" name="wifi" value="false"><label for="wifi">WiFi</label>
+  <input class="myChoice" type="checkbox" name="cigarettes" value="false"><label for="cigarettes">Cigarettes</label>
+  <input class="myChoice" type="checkbox" name="drinks" value="false"><label for="drinks">Drinks</label>
+  <input class="myChoice" type="checkbox" name="souvenirs" value="false"><label for="souvenirs">Souvenirs</label>
+
+  </form>
 </div>
 </>
 {{!--  --}}
