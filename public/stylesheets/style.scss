@@ -5,18 +5,19 @@ body {
 .navKiosk {
   display: flex;
   justify-content: flex-end;
-  height: 70px;
+  padding: 0;
   background-color: black;
 }
 
 a:link {
   text-decoration: none;
   font-size: 20px;
-  padding: 20px 20px 20px 20px ;
+  padding: 20px 20px 20px 20px;
   align-items: center;
-
 }
-a:visited {color: white;}
+a:visited {
+  color: white;
+}
 
 a:hover {
   color: white;
@@ -26,10 +27,10 @@ a:hover {
 }
 
 a.linkForm {
- color: black;
+  color: black;
 }
 a.linkForm:visited {
-  color:black;
+  color: black;
 }
 
 .modal-body {
@@ -38,8 +39,8 @@ a.linkForm:visited {
 }
 
 .titleModal {
- text-decoration-line: underline;
- font-weight:bold;
+  text-decoration-line: underline;
+  font-weight: bold;
 }
 
 p.clasificacion {
@@ -77,7 +78,7 @@ p.clasificacion input:checked ~ label {
   border-color: black;
   border-width: 2px;
   padding-top: 25px;
-  }
+}
 
 .fontForm {
   font-size: 20px;
@@ -103,32 +104,24 @@ p.clasificacion input:checked ~ label {
 }
 
 .banner {
-  background-image: url("../images/kioskHome.jpeg");
+  background-image: url("/images/kioskHome.jpeg");
   background-color: #000;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
-  display: table;
   width: 100%;
-  height: 100%;
+  padding: 100px 0;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  display: table;
-  height: 100%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.4);
   animation: banner-in 2s;
-}
-
-.banner__container {
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .banner__title {
@@ -179,15 +172,16 @@ p.clasificacion input:checked ~ label {
 .containerKiosk {
   padding: 100px 50px 50px 50px;
   display: flex;
- 
 }
 
-.buttons-container{
+
+
+.buttons-container {
   text-align: center;
 }
 
-.titlePartial{
-  font-weight:bold;
+.titlePartial {
+  font-weight: bold;
   font-size: 20px;
   text-align: center;
   padding: 20px 20px 20px 20px;
@@ -229,8 +223,8 @@ p.clasificacion input:checked ~ label {
 
 }
 
-.sect--type{
-  background-image: url('../images/backgroundHome.jpeg');
+.sect--type {
+  background-image: url("/images/backgroundHome.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -271,6 +265,49 @@ p.clasificacion input:checked ~ label {
   line-height: 23px;
 }
 
+//-------------------------------
+// with prew css
+.dark-background {
+  color: white;
+  background-color: rgb(25, 33, 41);
+}
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 75px 0;
+}
 
+.col {
+  float: left;
+}
 
+.col-3 {
+  width: 30%;
+}
+
+.text {
+  font-size: 2em;
+  font-weight: 100;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.link-btn {
+  color: white;
+  background-color: rgb(67, 163, 230);
+  font-family: "Roboto Condensed";
+  font-size: 2em;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: 150px;
+  margin: 40px auto 0;
+  padding: 14px 20px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.clearfix {
+  clear: both;
+}
