@@ -4,11 +4,7 @@ body {
 .navKiosk {
   display: flex;
   justify-content: flex-end;
-<<<<<<< HEAD
-  height: 70px;
-=======
   padding: 0;
->>>>>>> 2d9be3ade01f173398fd6e5deae87bf53fbc3412
   background-color: black; }
 
 a:link {
@@ -78,19 +74,23 @@ p.clasificacion input:checked ~ label {
 .titleProfile {
   text-align: center;
   top: 30px;
-  height: 200px; }
+  height: 200px;
+  padding-top: 50px;
+  color: white;
+  font-size: 40px; }
 
 .profile {
-  background-color: #fdf5e6;
+  background-color: #3D3D45;
   border-color: black;
   border-width: 2px;
   width: 700px;
   height: 300px;
   margin: 90px 400px 200px 600px; }
 
-.buttonProfile {
-  margin-left: 500px;
-  background-color: red; }
+.profileText {
+  color: white;
+  font-size: 20px;
+  text-align: center; }
 
 .banner {
   background-image: url("/images/kioskHome.jpeg");
@@ -127,6 +127,9 @@ p.clasificacion input:checked ~ label {
   margin-bottom: 18px;
   animation: opacity 3s; }
 
+.row {
+  display: block; }
+
 .btn {
   color: #fff;
   padding: 10px 20px;
@@ -155,6 +158,13 @@ p.clasificacion input:checked ~ label {
 
 .buttons-container {
   text-align: center; }
+
+.buttonModal {
+  background-color: #3D3D45;
+  border: solid 2px black; }
+
+.letterButtonModal {
+  font-size: 20px; }
 
 .titlePartial {
   font-weight: bold;
@@ -189,7 +199,26 @@ p.clasificacion input:checked ~ label {
   height: 60px; }
 
 .titleComments {
-  font-size: 30px; }
+  font-size: 25px;
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+  font-weight: bold; }
+
+.commentPages {
+  display: flex;
+  flex-wrap: nowrap; }
+
+.card-action {
+  color: white; }
+
+.elementsCommentPages {
+  margin-top: 90px;
+  background-color: #e2e2e2;
+  padding: 30px 40px 70px 40px;
+  border: solid 2px; }
+
+.commentComments {
+  font-size: 20px; }
 
 .sect--type {
   background-image: url("/images/backgroundHome.jpeg");

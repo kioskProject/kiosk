@@ -1,6 +1,13 @@
-<h1 class= "titleComments">Author 
-  {{this.author.username}}</h1>
-  <br>
-<h1 class= "titleComments">Kiosk Name{{this.kiosk.kioskName}}</h1>
-<br>
-<p class= "titleComments">Comments{{this.comments}}</p>
+<div class="col s12 m6 l3">
+  <div class="card blue-grey darken-1">
+    <div class="card-content white-text">
+      <span class="card-title">{{this.kiosk.kioskName}}</span>
+      <p>{{this.comments}}</p>
+    </div>
+    <div class="card-action">
+      <p>{{this.author.username}}</p>
+
+    </div>
+  </div>
+
+</div>

@@ -5,11 +5,11 @@
     <img src="{{this.picPath}}" alt="" height="300px" width="400px">
 
     <div class="buttons-container">
-      <button type="button" class="btn btn-primary">
-        <a href="/comments/{{this.id}}">Comments</a>
+      <button type="button" class="btn btn-primary buttonModal">
+        <a class="letterButtonModal"href="/comments/{{this.id}}">Comments</a>
       </button>
 
-      <button type="button" class="btn btn-primary show-modal-trigger" data-toggle="modal" data-target="#exampleModal" data-kiosk-order="{{@index}}">
+      <button type="button" class="btn btn-primary buttonModal show-modal-trigger " data-toggle="modal" data-target="#exampleModal" data-kiosk-order="{{@index}}">
         Details
       </button>
 

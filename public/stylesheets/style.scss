@@ -88,9 +88,12 @@ p.clasificacion input:checked ~ label {
   text-align: center;
   top: 30px;
   height: 200px;
+  padding-top: 50px;
+  color:white;
+  font-size: 40px;
 }
 .profile {
-  background-color: #fdf5e6;
+  background-color: #3D3D45;
   border-color: black;
   border-width: 2px;
   width: 700px;
@@ -98,10 +101,12 @@ p.clasificacion input:checked ~ label {
   margin: 90px 400px 200px 600px;
 }
 
-.buttonProfile {
-  margin-left: 500px;
-  background-color: red;
+.profileText{
+  color:white;
+  font-size: 20px;
+ text-align:center;
 }
+
 
 .banner {
   background-image: url("/images/kioskHome.jpeg");
@@ -142,6 +147,9 @@ p.clasificacion input:checked ~ label {
   animation: opacity 3s;
 }
 
+.row {
+  display: block;
+}
 .btn {
   color: #fff;
   padding: 10px 20px;
@@ -174,10 +182,17 @@ p.clasificacion input:checked ~ label {
   display: flex;
 }
 
-
-
 .buttons-container {
   text-align: center;
+}
+.buttonModal {
+  background-color: #3D3D45;
+  border: solid 2px black;
+
+  
+}
+.letterButtonModal{
+  font-size: 20px;
 }
 
 .titlePartial {
@@ -218,11 +233,36 @@ p.clasificacion input:checked ~ label {
 }
 
 .titleComments {
-  font-size: 30px;
-  
+  font-size: 25px;
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+  font-weight: bold;
+  }
+
+.commentPages {
+  display: flex;
+
+  flex-wrap: nowrap ;
+ 
 
 }
+.cardColor {
+  
+}
 
+.card-action{
+  color: white;
+}
+.elementsCommentPages{
+  margin-top: 90px;
+  background-color:rgb(226,226,226);
+  padding: 30px 40px 70px 40px;
+  border: solid 2px;
+}
+
+.commentComments {
+  font-size: 20px;
+}
 .sect--type {
   background-image: url("/images/backgroundHome.jpeg");
   background-position: center;

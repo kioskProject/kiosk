@@ -2,12 +2,11 @@
 <div class = "profile">
 <h1 class = "titleProfile">Welcome
   {{#each user}}
-  <a href="/{{this.id}}"></a>
+  {{!-- <a href="/{{this.id}}"></a> --}}
   {{this.username}}
   {{/each}}
 </h1>
-    <div><img src="{{this.picPath}}" alt=""></div>
-<button type="button" class="btn btn-info buttonProfile">¿?</button>
+<p class="profileText">View the<a href="/comments">comments</a> </p>
 
 
 </div>
