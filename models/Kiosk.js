@@ -3,6 +3,7 @@ const Schema   = mongoose.Schema;
 
 const kioskSchema = new Schema({
   kioskName: String,
+  description: String,
   location: { latitude: Number, longitude: Number },
   // service: {type: String, enum : ['WiFi','Bebidas','Prensa internacional', 'Colecciones cromos','Souvenirs','Colecciones infantiles','Tabaco']},
   wifi: Boolean,

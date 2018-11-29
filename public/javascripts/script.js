@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log('IronGenerator JS imported successfully!');
 
+
 }, false);
 
 
@@ -9,8 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // $(document).ready(function() {
 //   $(".myChoice").click(function(event) {
  
-  $(function(){
+  /* $(function(){
     $('.checkbox').on('change',function(){
        $('#form').submit();
        });
-   });
+   }); */
+
+

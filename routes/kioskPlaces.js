@@ -22,17 +22,24 @@ router.get('/', ensureLoggedIn("/auth/login"),(req, res, next) => {
 
 router.post('/new', (req, res, next) => {
 
+  let wifi = req.body.wifi == 'on' ? true : false;
+  let drinks = req.body.drinks == 'on' ? true : false;
+  let souvenirs = req.body.souvenirs == 'on' ? true : false;
+  let cigarettes = req.body.cigarettes == 'on' ? true : false;
+
   let newKiosk = {
-    name: req.body.newKioskName,
+    kioskName: req.body.newKioskName,
     description: req.body.newKioskDesc,
-    
+    wifi,
+    drinks,
+    souvenirs,
+    cigarettes,
+
     location: {
-      
       latitude: Number(req.body.newKioskLatitude), 
-      longitude: Number(req.body.newKioskLongitude)  // cómo rel las coordenadas newKioskLoc
+      longitude: Number(req.body.newKioskLongitude)  
     }
   }
-  console.log(newKiosk);
   Kiosk.create(newKiosk).then( kiosk => {
     res.redirect('/kioskPlaces');
   }).catch(e=> next(e));

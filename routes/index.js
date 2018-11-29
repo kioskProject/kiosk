@@ -5,6 +5,7 @@ const kioskPlacesRoutes = require("./kioskPlaces");
 const commentsRoutes= require("./comments");
 const editProfileRoutes = require("./editProfile");
 const Comment = require("../models/Comment");
+const detailsRoutes = require("./details");
 
 /* GET home page */
 router.get("/", (req, res, next) => {
@@ -15,6 +16,7 @@ router.use("/maps", mapsRoutes);
 router.use("/kioskPlaces", kioskPlacesRoutes);
 router.use("/comments", commentsRoutes);
 router.use("/editProfile", editProfileRoutes);
+router.use("/details", detailsRoutes);
 
 
 
