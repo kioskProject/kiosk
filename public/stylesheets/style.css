@@ -57,10 +57,22 @@ p.clasificacion label {
   float: right;
   color: #333; }
 
+.input-field {
+  background-color: #fdf5e6; }
+
 p.clasificacion label:hover,
 p.clasificacion label:hover ~ label,
 p.clasificacion input:checked ~ label {
   color: #ffd700; }
+
+.footer {
+  background-color: #fdf5e6;
+  display: inline-flex;
+  width: 100%;
+  flex-direction: row-reverse; }
+
+.footer p {
+  margin-right: 20%; }
 
 .titleSignup {
   margin: 100px 400px 50px 750px;
@@ -135,7 +147,8 @@ p.clasificacion input:checked ~ label {
   animation: opacity 3s; }
 
 .row {
-  display: block; }
+  display: flex;
+  flex-wrap: nowrap; }
 
 .btn {
   color: #fff;
@@ -221,8 +234,12 @@ p.clasificacion input:checked ~ label {
 .elementsCommentPages {
   margin-top: 90px;
   background-color: #e2e2e2;
-  padding: 30px 40px 70px 40px;
+  padding: 50px 40px 70px 40px;
   border: solid 2px; }
+
+.boxColor {
+  background-color: #3D3D45 !important;
+  margin-top: 200px; }
 
 .commentComments {
   font-size: 20px; }
@@ -275,6 +292,8 @@ p.clasificacion input:checked ~ label {
 
 .col-3 {
   width: 30%; }
+  .col-3 .col {
+    float: left; }
 
 .text {
   font-size: 2em;
