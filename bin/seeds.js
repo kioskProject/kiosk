@@ -42,6 +42,7 @@ let users = [
 let kiosks = [
   {
     kioskName: "Kiosk America",
+    description: "hola quetal",
     wifi: true,
     drinks: true,
     souvenirs: true,
@@ -58,6 +59,7 @@ let kiosks = [
 
   {
     kioskName: "Your Kiosk",
+    description: "hola quetal",
     wifi: true,
     drinks: true,
     souvenirs: true,
