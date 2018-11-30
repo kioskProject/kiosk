@@ -10,14 +10,12 @@ body {
   justify-content: flex-end;
   padding: 0;
   background-color: black;
-}
-
-nav {
-
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 1;
+  height: 64px;
+  line-height: normal;
 }
 
 a:link {
@@ -172,7 +170,7 @@ p.clasificacion input:checked ~ label {
 
 .row {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 .centerTextHome{
   margin: 0 auto;
@@ -218,10 +216,18 @@ p.clasificacion input:checked ~ label {
   text-align: center;
 }
 .buttonModal {
-  background-color: #3D3D45;
+  background-color: #3D3D45 !important;
   border: solid 2px black;
+  color: white;
+    font-size: 22px;
+    font-family: "Roboto Condensed";
+    text-decoration: none;
+}
 
-  
+.buttonModal:hover {
+  background-color: 	#dcdcdc !important;
+  color: black;
+  border: solid 2px black;
 }
 .letterButtonModal{
   font-size: 20px;
