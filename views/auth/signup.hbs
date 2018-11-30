@@ -10,24 +10,23 @@
     <div class="row">
       <div class="input-field col s12">
         <form action="/auth/signup" method="post" enctype="multipart/form-data" class="col s12">
-          <label class ="fontForm" for ="username">Username</label>
+          <label class="fontForm" for="username">Username</label>
           <input id="username" type="text" name="username" placeholder="Your username" class="validate placeholderSignUp">
 
           <br><br>
 
-          <label class ="fontForm" for="password">Password</label>
+          <label class="fontForm" for="password">Password</label>
           <input id="password" type="password" name="password" placeholder="Your password">
 
           <br><br>
-          <label class ="fontForm"  for="email">Email</label>
+          <label class="fontForm" for="email">Email</label>
           <input id="email" type="email" name="email" placeholder="Your email">
           <br><br>
           <br>
 
 
-          <label>Choose your file</label>
           <input type="file" name="photo">
-          
+
 
           {{#if message }}
           <div class="error-message">{{ message }}</div>
@@ -41,15 +40,9 @@
           <br><br>
           <p class="account-message">
             Do you already have an account?
-            <a class="linkForm"href="/auth/login">Login</a>
+            <a class="linkForm" href="/auth/login">Login</a>
           </p>
         </form>
 
 
       </div>
-
-
-
-
-
-
