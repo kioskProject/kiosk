@@ -414,9 +414,12 @@ footer{
 }
 
 .mapForm{
-  height: 100px;
+  margin: 50px;
   display: flex;
+  z-index: 1;
   flex-direction:  column;
-  justify-content: center;
+  align-items: center;
+  height: 500px;
+
 }
 

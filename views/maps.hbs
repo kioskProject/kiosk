@@ -12,12 +12,12 @@
 <body class="image " >
  <h1>Look for your Kiosk</h1>
 
-  <div id="map"></div>
+  <div id="map" style="position:sticky !important"></div>
   
 {{!-- FORM --}}
-<div class="mapForm"> 
+<div > 
 
-  <form id="form" action="/kioskPlaces/new" enctype="multipart/form-data" method="POST">
+  <form id="form" class="mapForm" action="/kioskPlaces/new" enctype="multipart/form-data" method="POST">
   <input id="newName" type="text" name="newKioskName" placeholder="Nombre del kiosko">
   <input id="latitude" type="hidden" name="newKioskLatitude">
   <input id="longitude" type="hidden" name="newKioskLongitude">
