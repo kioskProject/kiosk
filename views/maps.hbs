@@ -12,26 +12,28 @@
 <body class="image " >
  <h1>Look for your Kiosk</h1>
 
-  <div id="map" style="position:sticky !important"></div>
+  <div id="map" ></div>
   
 {{!-- FORM --}}
 <div > 
-
+  
   <form id="form" class="mapForm" action="/kioskPlaces/new" enctype="multipart/form-data" method="POST">
-  <input id="newName" type="text" name="newKioskName" placeholder="Nombre del kiosko">
+  <h1 class="add">ADD A NEW KIOSK</h1>
+  <input id="newName" type="text" name="newKioskName" placeholder="Kiosk name">
   <input id="latitude" type="hidden" name="newKioskLatitude">
   <input id="longitude" type="hidden" name="newKioskLongitude">
-  <textarea id="description" type="text" name="newKioskDesc" placeholder="Descripción"></textarea>
+  <textarea id="description" type="text" name="newKioskDesc" placeholder="Description"></textarea>
  
-  <label>Choose your file</label>
-  <input type="file" name="photo">
+   
+  <input class="inputsForm" type="file" name="photo">
     
+  <div class="checkbox">
   <input class="myChoice" type="checkbox" name="wifi"><label for="wifi">WiFi</label>
-  <input class="myChoice" type="checkbox" name="cigarettes" value="false"><label for="cigarettes">Cigarettes</label>
-  <input class="myChoice" type="checkbox" name="drinks" value="false"><label for="drinks">Drinks</label>
-  <input class="myChoice" type="checkbox" name="souvenirs" value="false"><label for="souvenirs">Souvenirs</label>
-
-  <button type="submit" class="button">AÑADIR NUEVO KIOSKO</button>
+  <input class="myChoice" type="checkbox" name="cigarettes" ><label for="cigarettes">Cigarettes</label>
+  <input class="myChoice" type="checkbox" name="drinks" ><label for="drinks">Drinks</label>
+  <input class="myChoice" type="checkbox" name="souvenirs" ><label for="souvenirs">Souvenirs</label>
+</div>
+  <button type="submit" class="link-btn">SUBMIT</button>
 
 
 
