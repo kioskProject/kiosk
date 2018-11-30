@@ -415,7 +415,7 @@ footer{
   height: 130px;
   padding: 12px 20px;
   box-sizing: border-box;
-  border: 2px solid  #74afcb;
+  border: 2px solid #3D3D45;
   border-radius: 4px;
   background-color: #f8f8f8;
   font-size: 16px;
@@ -437,5 +437,50 @@ footer{
   align-items: center;
   height: 500px;
 
+}
+
+#newName {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 15px 0 15px;
+  box-sizing: border-box;
+  border: 2px solid #3D3D45;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 15px;
+  resize: none;
+}
+
+
+.inputsForm{
+  width: 30%;
+  padding: 12px 20px;
+  margin: 15px 0 15px;
+  box-sizing: border-box;
+  font-size: 15px;
+  resize: none;
+}
+
+.myChoice{
+ 
+margin: 0px 8px 30px;
+padding: 10px;
+}
+
+.add{
+  font-size: 35px;
+}
+
+.link-btn {
+  color: white;
+background-color: #3D3D45;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  width: 150px;
+  margin: 40px auto 0;
+  padding: 14px 20px;
+  border: 2px solid rgba(56, 53, 53, 0.2);
 }
 
