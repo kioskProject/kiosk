@@ -146,17 +146,16 @@ p.clasificacion input:checked ~ label {
   margin-bottom: 18px;
   animation: opacity 3s; }
 
+.row {
+  display: flex;
+  flex-wrap: nowrap; }
+
 .centerTextHome {
   margin: 0 auto; }
 
 .pHome {
   display: block;
   margin: 0 auto; }
-
-.row {
-  display: flex;
-  flex-wrap: nowrap; 
-}
 
 .btn {
   color: #fff;
@@ -348,5 +347,11 @@ footer {
   margin: 0px 0px 10px 0px;
   padding: 10px;
   font-size: 10px; }
+
+.mapForm {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,13 +12,8 @@ router.get('/', ensureLoggedIn("/auth/login"),(req, res, next) => {
     });
  */
     res.render('kioskPlaces', {kiosks, kiosksString: JSON.stringify(kiosks)})
- });
-   
-  
+ }); 
 });
-
-
-
 
 
 router.post('/new', uploadCloud.single("photo"), (req, res, next) => {

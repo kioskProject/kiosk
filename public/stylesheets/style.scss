@@ -392,10 +392,7 @@ footer{
   margin: 50px 0px 0px 0px;
 }
 
-// .mapForm{
 
-//   height: 20px;
-// }
 
 .mapForm textarea {
   width: 40%;
@@ -415,3 +412,11 @@ footer{
   padding: 10px;
   font-size: 10px;
 }
+
+.mapForm{
+  height: 100px;
+  display: flex;
+  flex-direction:  column;
+  justify-content: center;
+}
+
