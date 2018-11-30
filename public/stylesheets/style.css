@@ -58,7 +58,7 @@ p.clasificacion label {
   color: #333; }
 
 .input-field {
-  background-color: #fdf5e6; }
+  background-color: #d3d3d3; }
 
 p.clasificacion label:hover,
 p.clasificacion label:hover ~ label,
@@ -78,9 +78,15 @@ p.clasificacion input:checked ~ label {
   margin: 100px 400px 50px 750px;
   font-family: "Roboto Condensed", cursive; }
 
+.placeholderSignUp {
+  color: black; }
+
+.buttonRegister {
+  background-color: #3D3D45 !important; }
+
 .signup {
   margin: 90px 400px 200px 600px;
-  background-color: #fdf5e6;
+  background-color: #d3d3d3;
   width: 500px;
   border-color: black;
   border-width: 2px;
@@ -110,6 +116,9 @@ p.clasificacion input:checked ~ label {
   color: white;
   font-size: 20px;
   text-align: center; }
+
+.commentsProfile {
+  padding: 0 auto; }
 
 .banner {
   background-image: url("/images/HOMEpicture.jpg");
