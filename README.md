@@ -9,5 +9,5 @@ Web app that let you search for nearby kiosks which offer Wi-Fi, cigarettes or s
  https://github.com/kioskProject/kiosk 
  
  ## Notes about the code
- From the beginning we were clear about what we wanted to do and we managed to carry it out. The most important thing is that we grew as web programmers.
+ From the beginning we were clear about what we wanted to do and we managed to carry it out. The most important thing is that we grew as a person and as web programmers.
 
