@@ -5,8 +5,8 @@
 ## Description
 Web app that let you search for nearby kiosks which offer Wi-Fi, cigarettes or souvenirs. Focused on tourists.
 
-## Github
- https://github.com/kioskProject/kiosk 
+## The website
+ https://kiosk-project.herokuapp.com/
  
  ## Notes about the code
  From the beginning we were clear about what we wanted to do and we managed to carry it out. The most important thing is that we grew as a person and as web programmers.
