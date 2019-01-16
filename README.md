@@ -9,5 +9,5 @@ Web app that let you search for nearby kiosks which offer Wi-Fi, cigarettes or s
  https://github.com/kioskProject/kiosk 
  
  ## Notes about the code
- I am proud of this code because it was the first web app I created together with my developer colleague Patricia López. And of course, I want to thank my partner Patricia Lopez, who also worked on this project.
+ From the beginning we were clear about what we wanted to do and we managed to carry it out. The most important thing is that we grew as web programmers.
 
